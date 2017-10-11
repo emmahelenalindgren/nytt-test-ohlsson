@@ -19,7 +19,7 @@ var bodyParser = require("body-parser");
 
 //
 
-app.set("view engine", "pug")
+app.set("view engine", "pug");
 app.use(express.static(__dirname + '/public'));
 app.set('views', __dirname + '/views');
 
@@ -36,13 +36,13 @@ app.get("/carlist", (req, res) => {
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.use("/", routy)
+app.use("/", routy);
 
 
 
 app.get("*", (req, res) => {
     res.sendFile(__dirname + "/fel.html");
-})
+});
 
 
 // Koppla upp mot en databas

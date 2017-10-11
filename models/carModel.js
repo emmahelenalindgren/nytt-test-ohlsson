@@ -1,5 +1,5 @@
 var mongoose = require('mongoose'),
-    Schema = mongoose.Schema
+    Schema = mongoose.Schema;
 
 var fordonSchema = new Schema({
     fordonstyp: String,
@@ -15,5 +15,5 @@ var fordonSchema = new Schema({
                 skador: String
             },
     bookedDate: String
-})
+});
 module.exports = mongoose.model('cars', fordonSchema);
